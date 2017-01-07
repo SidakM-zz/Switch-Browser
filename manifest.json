@@ -1,0 +1,21 @@
+{
+  "manifest_version": 2,
+
+  "name": "Switch Browser",
+  "description": "This extension opens all tabs currently open in chrome in FireFox",
+  "version": "1.0",
+
+  "browser_action": {
+    "default_icon": "icon.png",
+    "default_popup": "popup.html",
+    "default_title": "SwitchBrowser"
+  },
+  "permissions": [
+    "nativeMessaging",
+    "tabs",
+    "activeTab",
+    "background",
+    "http://*/", "https://*/"
+  ]
+
+}

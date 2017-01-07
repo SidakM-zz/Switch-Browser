@@ -1,0 +1,9 @@
+{
+  "name": "switch",
+  "description": "My Application",
+  "path": "C:\\Users\\Sidak Manchanda\\Desktop\\SwitchBrowser\\SwitchBrowser.bat",
+  "type": "stdio",
+  "allowed_origins": [
+    "chrome-extension://cgohcbfcipcmcckeefepnanlpeocoogh/"
+  ]
+}
