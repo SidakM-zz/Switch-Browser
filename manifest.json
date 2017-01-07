@@ -2,7 +2,7 @@
   "manifest_version": 2,
 
   "name": "Switch Browser",
-  "description": "This extension opens all tabs currently open in chrome in FireFox",
+  "description": "This extension opens all tabs currently open in chrome in some other browsers",
   "version": "1.0",
 
   "browser_action": {
