@@ -8,7 +8,9 @@ public class open {
 		String msg = getList();
 		String info [] = new String [2];
 		getInfo(info, msg);
-		BufferedWriter write = new BufferedWriter(new FileWriter("out.txt"));
+		BufferedWriter write = new BufferedWriter(new FileWriter("log.txt"));
+		write.write(msg);
+		write.newLine();
 		write.write(info[0]);
 		write.newLine();
 		write.write(info[1]);
@@ -16,6 +18,7 @@ public class open {
 		write.write(msg);
 		write.close();
 		run(info);
+		
 	}
 	private static void run(String[] info) throws IOException, InterruptedException {
 		Runtime rt = null;
@@ -28,9 +31,13 @@ public class open {
 				rt.exec("C:\\Program Files (x86)\\Opera\\launcher.exe " + info[1]);
 		}else if(info[0].equals("edge") == true){
 			String link[] = info[1].split(" ");
-			for(int x=0; x< info.length; x++){
+			for(int x=0; x< link.length; x++){
 				if(link[x].contains("http://")){
-					Process p = Runtime.getRuntime().exec("cmd.exe /c start microsoft-edge:http://" + link[x].substring(7, link[x].length()-1));
+					link[x]=link[x].substring(6,link[x].length()-1);
+					Process p = Runtime.getRuntime().exec("cmd.exe /c start microsoft-edge:http://" + link[x]);
+				}else if(link[x].contains("https://")){
+					link[x]=link[x].substring(7,link[x].length()-1);
+					Process p = Runtime.getRuntime().exec("cmd.exe /c start microsoft-edge:https://" + link[x]);
 				}else{
 					Process p = Runtime.getRuntime().exec("cmd.exe /c start microsoft-edge:http://" + link[x]);
 				}
@@ -62,8 +69,7 @@ public class open {
 	        System.in.read(message);
 	        String finalStr = new String(message, "UTF-8");
 
-			int index = finalStr.indexOf("www");
-			finalStr = finalStr.substring(index, finalStr.length()-2);
+			finalStr = finalStr.substring(9, finalStr.length()-2);
 			
 	        return finalStr;
 	
