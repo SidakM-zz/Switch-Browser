@@ -1,6 +1,6 @@
 body {
 	font-family: 'Roboto', sans-serif;
-	min-width: 200px;
+	min-width: 500px;
 	position: relative;
 	font-size: 16px;
 	background: #FFFAFA;
@@ -20,4 +20,8 @@ body {
     background-color: #f5f5f5;
     font-weight: bold;
 }
-.chooseB
+.radioB {
+	font-size: 16px;
+	line-height: 2em;
+	color: #ff6666;
+}

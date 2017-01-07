@@ -3,20 +3,30 @@
 <html>
   <head>
     <title>Pop-up for Switch to Firefox</title>
-    <link rel="stylesheet" href="dropDown.css">
+    <link rel="stylesheet" href="css/dropDown.css">
     <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
-    <script src="popup.js"></script>
+    <script src="js/popup.js"></script>
   </head>
   <body>
     <div class="optionList">
-
       <div class="option" id="SwitchCurrent">
             <span>Switch Current Tab</span>
       </div>
       <div class="option" id="SwitchAll">
             <span>Switch All Tabs</span>
       </div>
+    </div>
+    <div class="radioB">
+      <label><b>Choose Browser: </b></label>
+      <input type="radio" name="browser" id="firefox" value="firefox" checked="checked"/>
+      <label for="firefox">Firefox</label>
 
+      <input type="radio" name="browser" id="edge" value="edge"/>
+      <label for="edge">Edge</label>
+
+      <input type="radio" name="browser" id="opera" value="opera"/>
+      <label for="opera">Opera</label>  
+    </div>
   </body>
 </html>
 
